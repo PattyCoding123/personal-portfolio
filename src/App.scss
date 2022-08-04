@@ -47,21 +47,9 @@
     }
   }
   
-  .copyright {
-    width: 100%;
-    padding: 2rem 0 0;
-  
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-  
-    p {
-      text-transform: uppercase;
-      color: var(--black-color);
-    }
-  }
-  
+  // No copyright styling needed as we will not
+  // include a copyright section.
+
   .head-text {
     font-size: 2.75rem;
     font-weight: 800;
