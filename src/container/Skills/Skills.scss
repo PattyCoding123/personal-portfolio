@@ -1,0 +1,216 @@
+.app__skills {
+    flex: 1;
+    width: 100%;
+
+    // Make Skills and Experiences title appear above
+    // in the div.
+    flex-direction: column;
+}
+
+/*
+    We will make the container section only have 80%
+    width so that it doesn't take up the entire width
+    of the div. Additionally, we want to display
+    the Skills and Experiences in the container in a row.
+*/
+.app__skills-container {
+    width: 80%;
+    margin-top: 3rem;
+
+    display: flex;
+    flex-direction: row;
+
+    // For mobile devices, have the container take up the 
+    // entire screen and make the Skills and Experiences
+    // items be displayed in a column instead of a row.
+    @media screen and (max-width: 900px) {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+/*
+    For the list containing the Skills items, we want the items
+    to be justified and aligned with flex-start. Additionally, 
+    the Skills items should be displayed in a flex.
+*/
+.app__skills-list {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 5rem;
+
+    // For mobile devices, we will justify and align 
+    // the Skills items in the Skills list into the center
+    @media screen and (max-width: 900px) {
+        margin-right: 0;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+// Each Skill item will have their contents displayed in a flex
+// column such that the circle div box and image appear on top.
+.app__skills-item {
+    flex-direction: column;
+    text-align: center;
+    margin: 1rem;
+    transition: all 0.3s ease-in-out;
+
+    /*
+        The divs inside each skills-item will be 
+        styled to look like a circle.
+
+        Since the divs have a height and width set
+        to 90px, we can shrink the images of the skills to fit
+        within them by setting their width and height to 50%.
+    */
+    div {
+        width: 90px;
+        height: 90px;
+
+        border-radius: 50%;
+        background-color: #fff;
+
+        img {
+            width: 50%;
+            height: 50%;
+        }
+
+        // When the div is hovered over, give a box shadow
+        // with no h, v offset and a blur-radius of 25px.
+        &:hover {
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+        }
+
+        // For larger devices, increase the size of the divs
+        @media screen and (min-width: 2000px) {
+            width: 150px;
+            height: 150px;
+        }
+
+        // For smaller devices, decrease the size of the divs
+        @media screen and (max-width: 450px) {
+            width: 70px;
+            height: 70px;
+          }
+    }
+
+    // Increase the font-weight of the skill names.
+    p {
+        font-weight: 500;
+        margin-top: 0.5rem;
+    }
+
+    // For larger devices, give more margin around each 
+    // item and give some margin on the skill name.
+    @media screen and (min-width: 2000px) {
+        margin: 1rem 2rem;
+        
+        p {
+            margin-top: 1rem;
+        }
+    }
+}
+
+/*
+    Styling the div that contains the work experiences.
+    The experiences should displayed using flex, and the direction
+    should be in a column because we want the experiences to be stacked
+    on top of each other.
+*/
+.app__skills-exp {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    @media screen and (max-width: 900px) {
+        margin-top: 2rem;
+    }
+}
+
+/*
+    Styling each work-experience item by making the elements
+    appear in a row (with a display of flex). Width should
+    be 100%.
+
+    Remember, each work-experience item has a year(app__skills-exp-year),
+    a motion.div container (app__skills-exp-works) which holds 
+    multiple children motion.divs (app__skills-exp-work) for each 
+    job that year, and a tooltip to give a description of each job.
+*/
+.app__skills-exp-item {
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: flex-start; 
+   margin: 1rem 0;
+}
+
+// Styling the container which holds the current
+// year's work experiences.
+.app__skills-exp-works {
+    flex: 1;
+
+    /*
+        Style each of the work items by making them appear 
+        in a column such that the job-title goes on top,
+        then the company at the bottom. 
+    */
+    .app__skills-exp-work{
+        display: flex;
+        flex-direction: column;   
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        cursor: pointer; // Let user know they can hover over work item
+
+        h4 {
+            font-weight: 500;
+        }
+
+        p {
+            font-weight: 400;
+            color: var(--gray-color);
+            margin-top: 5px;
+        }
+    }
+}
+
+// We will style the years by giving them some margin on the right
+// so they aren't appearing directly next to the job title.
+.app__skills-exp-year {
+    margin-right: 3rem;
+
+    p {
+        font-weight: 800;
+        color: var(--secondary-color);
+    }
+
+    @media screen and (max-width: 450px) {
+        margin-right: 1rem;
+    }
+}
+
+.skills-tooltip {
+    max-width: 300px !important;
+    background-color: var(--white-color) !important;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 5px !important;
+    padding: 1rem !important;
+    color: var(--gray-color) !important;
+    text-align: center !important;
+    line-height: 1.5 !important;
+    opacity: 1 !important;
+  
+    @media screen and (min-width: 2000px) {
+      font-size: 1.75rem !important;
+      max-width: 500px !important;
+      line-height: 2 !important;
+    }
+  }

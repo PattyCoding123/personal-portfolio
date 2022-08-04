@@ -1,0 +1,247 @@
+/*
+    The navbar should take up 100% of the device's 
+    width and have a flex display. We want the elements
+    to have space between each while being center aligned.
+    The navbar should also be transparent when scrolling down,
+    so we have z-index to position it above the stack and
+    an appropriate alpha level.
+*/
+.app__navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.18);
+    position: fixed;
+    z-index: 2;
+}
+
+/* 
+    The logo picture should adjust itself based on the screen,
+    It will be given a flex display and aligned at the start of
+    the flex to appear left-sided. 
+
+    We will set a height and width for the logo.
+*/
+.app__navbar-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    img {
+        width: 90px;
+        height: 20px;
+
+        // For larger screens, we will increase the size
+        // of the logo.
+        @media screen and (min-width: 2000px){
+            width: 180px;
+            height: 40px;
+        }
+    }
+}
+
+/*
+    Links should be displayed as flex
+    while being center justified and center
+    aligned. There should not be any bullet points,
+    which is why list style is none.
+*/
+.app__navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+    /* 
+        Flex direction should be column based
+        with pointer as the cursor. This is so
+        the div element (which is the dot) will
+        appear on top of the anchor tags.
+    */
+    li {
+        margin: 0 1rem;
+        cursor: pointer;
+        flex-direction: column;
+
+        div {
+            width: 5px;
+            height: 5px;
+
+            background: transparent;
+            border-radius: 50%;
+            margin-bottom: 5px;
+        }
+
+        /*
+            The anchor tags should be displayed in column
+            and should not have any underlines. Also,
+            we will make them bolder by increasing the
+            font weight.
+        */
+        a {
+            color: var(--gray-color);
+
+            text-decoration: none;
+            flex-direction: column;
+            text-transform: uppercase;
+
+            font-weight: 500;
+
+            
+            // When hovering over the link, the transition will
+            // cause the link to go blue in 0.3 seconds
+            
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: var(--secondary-color);
+            }
+        }
+
+        &:hover {
+            div {
+                background: var(--secondary-color);
+            }
+        }
+    }
+    /* 
+        If a device's width <= 900px, then the Navbar will NOT
+        be rendered to the screen
+    */
+    @media screen and (max-width: 900px) {
+        display: none;
+    }
+
+}
+
+/* 
+    Hamburger menu for smaller devices.
+*/
+.app__navbar-menu {
+
+    /*
+        The following handles the icon for the button.
+        It will appear circular and have the secondary
+        background color. The position needs to be relative,
+        and it will be displayed in a flex.
+
+    */
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+
+    svg {
+        width: 70%;
+        height: 70%;
+
+        color: var(--white-color);
+    }
+
+    /* 
+        motion.div element which is the sidebar
+        that pops out if the user clicks the button.
+
+        The position needs to be fixed and appear higher
+        in the stack which is why the z-index will be 5.
+        The contents need to be displayed in flex and
+        in the column direction.
+     */
+    div {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 5;
+
+        padding: 1rem;
+        width: 80%;
+        height: 100vh;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+
+        background: url('../../assets/bgWhite.png');
+        background-color: var(--white-color);
+        background-size: cover;
+        background-repeat: repeat;
+
+        box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
+
+        svg {
+            width: 35px;
+            height: 35px;
+    
+            color: var(--secondary-color);
+
+            margin: 0.5rem 1rem;
+        }
+
+        // The list elements should be displayed in flex column
+        // so that they appear stacked on top of one another.
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+
+            // Like the Navbar links, the hamburger menu
+            // links should ease into blue when hovered over.
+            li {
+                margin: 1rem;
+
+                a {
+                    color: var(--gray-color);
+                    text-decoration: none;
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    font-weight: 500;
+
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        color: var(--secondary-color);
+                    }
+                }
+            }
+        }
+
+        /* 
+            If a device's width > 900px, then
+            the hamburger menu will not be rendered
+            to the screen.
+        */
+        @media screen and (min-width: 900px) {
+            display: none;
+        }
+    }
+
+        /* 
+            If a device's width > 900px, then
+            the hamburger menu button will not be rendered
+            to the screen.
+        */
+    @media screen and (min-width: 900px) {
+        display: none;
+    }
+}
+

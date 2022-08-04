@@ -1,0 +1,227 @@
+// Flex-direction is column to make title appear
+// at the top.
+.app__projects {
+    flex: 1;
+    width: 100;
+    flex-direction: column;
+}
+
+// Style container of filter tags such that they appear 
+// in a row and are justified at the start and center aligned.
+.app__project-filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 4rem 0 2rem;
+
+    /*
+        Style each filter such that they appear in a separate
+        box and clickable. Give each a transition of 0.3 seconds
+        to appear animated when hovered over.
+    */
+     .app__project-filter-item {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        background-color: #fff;
+        color: #000;
+        font-weight: 800;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin: 0.5rem;
+
+        &:hover {
+            background-color: var(--secondary-color);
+            color: #fff
+        }
+
+        // For larger devices, increase padding and make
+        // box look greater in size.
+        @media screen and (min-width: 2000px) {
+            padding: 1rem 2rem;
+            border-radius: 0.85rem;
+        }
+    }
+
+    // If a filter tag is current selected as the active filter,
+    // give a background color of secondary color and a white text.
+    .item-active {
+        background-color: var(--secondary-color);
+        color: #fff;
+    }
+}
+
+
+// Style the motion.div container which holds all the project items.
+// Additionally, center each item.
+.app__project-portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    /*
+        Have each project item div element a fixed width of 
+        270px with all contents displayed in column so 
+        that the image div appears at the top of the section,
+        then the text div.
+
+        The height will be adjusted based on the contents
+        of the project items.
+
+        This specific div can be seen as the white background
+        in the card-shaped div. (Does not take up whole div
+        due to padding declaration).
+    */
+    .app__project-item {
+        width: 270px;
+        flex-direction: column;
+        margin: 2rem;
+        padding: 1rem; 
+        border-radius: 0.5rem;
+        background-color: #fff;
+        color: #000;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        // Anytime a project item in the portfolio div is being 
+        // hovered over, give a box shadow around the project border.
+        &:hover {
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    // For larger devices, we will increase the container div
+    // to be of a larger width. 
+    @media screen and (min-width: 2000px) {
+        width: 470px;
+        padding: 1.25rem;
+        border-radius: 0.75rem;
+    }
+
+    // For smaller devices, we will make the container
+    // div have a width of 100%
+    @media screen and (max-width: 300px) {
+        width: 100%;
+        margin: 1rem;
+    }
+}
+
+/*
+    Each div that contains a project image should have a width
+    of 100% and a fixed height of 230px. The position of each
+    div should also be relative so that we can set the icons
+    over the image when we mark them with a position of absolute.
+*/
+.app__project-img {
+    width: 100%;
+    height: 230px;
+
+    position: relative;
+
+    /*
+        For the actual image tag, we want the height and width
+        to be 100% while also setting the object-fit to cover
+        so that it spreads over the div.
+    */
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem;
+        object-fit: cover;
+    }
+
+    // Increase the height of the div on larger devices.
+    @media screen and (min-width: 2000px)  {
+        height: 350px;
+    }
+}
+
+// Since the div position is absolute, it will position itself to an
+// ancestor that has relative positioning (.app__project-img).
+.app__project-hover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    // When the icon is being hovered over
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+
+    // Target the divs inside the .app_project-hover
+    // which contain the eye/github icons
+    div {
+        // Create circular divs for the icons to
+        // pop out more.
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+
+
+        margin: 1rem; // Give space between icons
+        font-family: var(--font-base);
+        font-weight: 800;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        // Target the SVG icons directly by reducing their
+        // size and making their color white.
+        svg {
+            width: 50%;
+            height: 50%;
+            color: var(--white-color);
+        }
+    }
+}
+
+/*
+    Target the text title and description of each project div.
+
+    These content divs will have relative positioning to be 
+    positioned relative to its normal position, and the 
+    div will have a flex-direction of column such that
+    the title appears above the description.
+*/
+.app__project-content {
+    padding: 0.5rem;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+
+    h4 {
+        margin-top: 1rem;
+        line-height: 1.5;
+
+        // For larger screens, have more margin on the top.
+        @media screen and (min-width: 2000px) {
+            margin-top: 3rem;
+        }
+    }
+
+    // I wanted a larger font size for the project descriptions
+    // so override the font-size of the <p> element to be 1rem.
+    p {
+        font-size: 1rem;
+    }
+
+    // The .app__project-tag div will be positioned in relation
+    // to its ancestor tag, the app__project-content tag.
+    .app__project-tag {
+        // Style such that the tag appears to be coming out
+        // of the white section of the project item.
+        position: absolute;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        background-color: #fff;
+        top: -25px;
+    }
+}

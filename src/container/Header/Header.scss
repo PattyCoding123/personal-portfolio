@@ -1,0 +1,254 @@
+/* 
+    Since we are working on a main section that we 
+    want to scroll to, we will use an id selector
+    of home to style the Header.
+*/
+
+#home {
+    position: relative;
+    background: url('../../assets/bgIMG.png');
+
+    // Always do this whenever you use an image as a background.
+    background-size: cover; 
+
+    background-repeat: repeat;
+    background-position: center;
+
+    .app__wrapper {
+        padding: 0;
+        
+        .copyright {
+            display: none;
+        }
+    }
+
+}
+
+.app__header {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+
+    padding: 6rem 2rem 0;
+
+    @media screen and (min-width: 2000px) {
+        padding-top: 8rem;
+    }
+
+    /*
+        For desktop devices, images are displayed row by row.
+        For smaller devices, images are displayed by column.
+
+    */
+    @media screen and (max-width: 1200px) {
+        flex-direction: column;
+    }
+
+    // For small mobile devices, include padding.
+    @media screen and (min-width: 2000px) {
+        padding-top: 6rem 1rem 2rem;
+    }
+
+}
+
+.app__header-info {
+    flex: 0.65;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+
+    // For very large devices
+    @media screen and (max-width: 2000px) {
+        width: 100%;
+        margin-right: 0rem;
+    }
+}
+
+/*
+    Refers to the intro badge and tag
+    in the header! 
+
+    The information of each should be displayed in a
+    flex column to appear on top of each other.
+
+    Ex. Hello, I am Patrick Ducusin! - badge
+    Ex. Web Developer - tag
+*/
+.app__header-badge {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+
+    /*  
+        For the into badge and tags, I want them to be 
+        displayed in a somewhat visible box, which is why
+        the box shadow property will be used.
+    */
+    .badge-cmp, .tag-cmp {
+        padding: 1rem 2rem;
+        border: var(--white-color);
+        border-radius: 15px;
+        flex-direction: row;
+        width: auto;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        font-size: 1.5rem; // I want a larger font size for the introductory badge.
+    }
+
+    .tag-cmp {
+        flex-direction: column;
+        margin-top: 3rem;
+
+        p { 
+            width: 100%;
+            text-transform: uppercase;
+            text-align: right;
+            font-size: 1.25rem; // I want a larger font size for the tag.
+        }
+
+        span {
+            font-size: 2.5rem;
+
+            // Increase font size for larger devices
+            @media screen and (min-width: 2000px) {
+                font-size: 5rem;
+            }
+        }
+
+        // For smaller devices
+        @media screen and (max-width: 1200px) {
+           justify-content: flex-start;
+           align-items: flex-start; 
+        }
+    }
+
+
+}
+
+// The header tech image bubbles should be displayed somewhat
+// in a flex column, but more variant styles will be seen below.
+.app__header-circles {
+    flex: 0.75;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 100%;
+    margin-left: 1rem;
+
+    /*
+        Standardize image stylings in the header. Have each div
+        be a circular border of the same height and width. 
+        Additionally, give a white background to the circular divs
+        and a box shadow to make them pop out.
+    */
+        div {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: var(--white-color);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+        img {
+            width: 60%;
+            height: 60%;
+        }
+    }
+
+    // For each tech bubble, create differing sizes and margins.
+    div:nth-child(1) {
+        margin: 1.75rem;
+        width: 250px;
+        height: 250px;
+    }
+
+    div:nth-child(2) {
+        margin: 1.75rem;
+        width: 200px;
+        height: 200px;
+    }
+
+    div:nth-child(3) {
+        width: 150px;
+        height: 150px;
+    }
+
+    // For large devices, increase the size of the tech images.
+    @media screen and (min-width: 2000px) {
+        div:nth-child(1) {
+            width: 400px;
+            height: 400px;
+        }
+    
+        div:nth-child(2) {
+            width: 300px;
+            height: 300px;
+        }
+    
+        div:nth-child(3) {
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    // For smaller devices, change display of the tech images
+    // such that they appear below the profile image.
+    @media screen and (max-width: 1200px) {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 0;
+
+        div {
+            margin: 1rem;
+        }
+    }
+}
+
+// Style the profile picture div element in the header.
+// Make the elements in the profile picture div flex.
+.app__header-img {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    // Move and resize our profile picture and circle relative to the 
+    // motion.div by declaring this parent element with position: relative.
+    position: relative; 
+
+    // Specifically targeting the profile image and circle.
+    // Have each image be contained in the div.
+    img {
+        width: 100%;
+        object-fit: contain; // To make images stay within div.
+        z-index: 1; // Position profile image in front of circle.
+    }
+
+    /*
+        Style circle that is behind our profile picture.
+        Since position is absolute, it will always position itself in front
+        of the parent div (app__header.img) if we make the left, right, and 
+        bottom positions 0 (0 pixels away from the left, right, and bottom
+        of its position).
+    */
+    .overlay_circle {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0; // Position circle behind profile picture.
+        width: 100%;
+        height: 90%;
+    }
+
+    // For smaller devices, define new margin around div.
+    @media screen and (max-width: 1200px) {
+        margin: 2rem 0;
+    }
+}

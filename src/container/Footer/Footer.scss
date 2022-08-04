@@ -1,0 +1,168 @@
+// Style main motion.div of contact form with 
+// equal spacing and a flex direction of column
+.app__footer {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+
+    // With column, title appears above everything else.
+}
+
+/*
+    Style the cards container by making the children divs
+    flex items, having the container be a width of 60%,
+    and justifying the content with space evenly and
+    aligning everything in the center of the cross axis.
+
+    Allow the divs to wrap as well.
+*/
+.app__footer-cards {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 4rem 2rem 2rem;
+
+    /*
+        Style each individual card by giving the div
+        a min-width, a display of flex such that
+        the icons appear on the left and the anchor
+        tags appear on the right.
+
+        Additionally, give some margin, padding, a
+        border radius, and make the cursor a pointer
+        when hovering over the cards
+    */
+    .app__footer-card {
+        min-width: 290px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        margin: 1rem 0;
+        padding: 1rem;
+        border-radius: 10px;
+        background-color: var(--white-color);
+
+        // For when the user hovers over the card,
+        // the change in styling will take on this transition.
+        transition: all 0.3s ease-in-out; 
+
+        // Style the images such that they are contained in the div
+        // and are not directly next to the anchor tags.
+        img, svg {
+            width: 40px;
+            height: 40px;
+            margin: 0 0.7rem;
+        }
+
+        svg {
+            color: #0072b1;
+        }
+
+        // In the divs, target the <p> elements 
+        // by increasing their font weight.
+        p {
+            font-weight: 600;
+        }
+
+        // Give a box shadow with 25px blur radius and that
+        // color whenever the user hovers over the contact card.
+        &:hover {
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+        }
+
+        // For mobile devices, make the contact card
+        // take up the entire screen.
+        @media screen and (max-width: 450px) {
+            width: 100%;
+        }
+    }
+
+    // For tablet devices, make the contact card
+    // container take up the entire screen.
+    @media screen and (max-width: 800px) {
+        width: 100%;
+    }
+}
+
+// Target the anchor tag elements by giving the cursor
+// a pointer and removing the underline.
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/*
+    Begin styling the footer's form field container
+    by giving the div a width of 60% and making the flex
+    direction a column such that the items appear
+    stacked on top of another.
+*/
+.app__footer-form {
+    width: 60%;
+    flex-direction: column;
+    margin: 1rem 2rem;
+
+    // Target the individual divs which contain
+    // a single text field
+    div {
+        width: 100%;
+        margin: 0.75rem 0;
+        border-radius: 10%;
+        cursor: pointer;
+
+        // For when the user hovers over the text field.
+        transition: all 0.3s ease-in-out; 
+
+        /*
+            For the text fields, we want them to take take up
+            100% of the width of their div along with some
+            slight padding, rounded edges, no borders and
+            outlines, and different colors and fonts.
+        */
+        input, textarea {
+            width: 100%;
+            padding: 0.95rem;
+            border: none;
+            border-radius: 7px;
+            background-color: var(--white-color);
+
+            font-family: var(--font-base);
+            color: var(--secondary-color);
+            font-size: 1rem;
+            outline: none;
+        }
+
+        textarea {
+            height: 170px;
+        }
+
+        &:hover {
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    // Style the submit button
+    button {
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        border: none;
+        background-color: var(--secondary-color);
+        font-weight: 500;
+        color: var(--white-color);
+        outline: none;
+        margin: 2rem 0 0 0;
+        font-family: var(--font-base);
+        cursor: pointer;
+        // For when the user hovers over the button.
+        transition: all 0.3s ease-in-out; 
+
+        &:hover {
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+
