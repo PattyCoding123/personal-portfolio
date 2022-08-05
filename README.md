@@ -59,7 +59,7 @@
 
 [![Look at the live demo!][product-screenshot]](https://patrickducusinportfolio.com)
 
-As mentioned earlier, the project was my attempt at a fully responsive personal porfolio website that I could use to display my skills and experiences. The entire front-end code was handled using React.js, and I configured Sanity in JavaScript to assist with the back-end data management. I initialized the project using the npx create-react-app command and proceded to make the necessary components to bring the website to life. I used SASS for the styling of all the DOM elements, and I connected a Sanity.io client to the components in order to avoid hardcoding my data into the front-end. Now, I can add more skills, job experiences, and descriptions without needing to code them again in the front-end. Additionally, with the styling, the website is fully functional on many mobile devices. 
+As mentioned earlier, the project was my attempt at a fully responsive personal porfolio website that I could use to display my skills and experiences. The entire front-end code was handled using React.js, and I configured Sanity in JavaScript to assist with the back-end data management. I initialized the project using the npx create-react-app command. I connected a Sanity client to the components in order to avoid hardcoding my data into the front-end. Now, I can add more skills, job experiences, and descriptions without needing to code them all in the front-end. Additionally, with the styling, the website is fully functional on many mobile devices. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -125,7 +125,7 @@ Project Link: [https://github.com/PattyCoding123/personal-portfolio](https://git
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 * [Sanity.io for the amazing compatibility with React!](https://www.sanity.io/)
-
+* [JavaScript Mastery with project-based coaching](https://youtube.com/c/JavaScriptMastery)
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
