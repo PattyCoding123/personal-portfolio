@@ -19,7 +19,7 @@
 <h1 align="center">My Personal Portfolio</h1>
 
   <p align="center">
-    My Personal Porfolio is my own personal portfolio project that I programmed using React.js for the front-end and Sanity.io for the back-end content management.
+    My Personal Porfolio is a portfolio project that I programmed using React.js for the front-end and Sanity.io for the back-end content management.
     <br />
     <a href="https://github.com/PattyCoding123/personal-portfolio"><strong>Check out the docs »</strong></a>
     <br />
