@@ -44,13 +44,6 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation-and-running">Installation and Running</a></li>
-      </ul>
-    </li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -78,25 +71,6 @@ As mentioned earlier, the project was my attempt at a fully responsive personal 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-Since the app utilizes the Flutter framework, it is best to install an IDE that is compatible with Flutter such as Android Studio or VS Code.
-
-Once you have a compatible IDE installed, you can move to the prerequisites section to see what you must install.
-
-### Prerequisites
-* Flutter - read the installation documentation [here](https://docs.flutter.dev/get-started/install)
-* Android device (minimum SDK >= 19) or an iOS device to run the application. 
-* If you lack a device, download [Android Studio][Android-Studio-url] and configure an [Android emulator](https://developer.android.com/studio/run/emulator).
-
-
-### Installation and Running
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 <!-- ROADMAP -->
 ## Roadmap
 
@@ -111,7 +85,6 @@ Once you have a compatible IDE installed, you can move to the prerequisites sect
 See the [open issues](https://github.com/PattyCoding123/personal-portfolio/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- CONTRIBUTING -->
@@ -159,7 +132,7 @@ Project Link: [https://github.com/PattyCoding123/personal-portfolio](https://git
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[license-shield]: https://img.shields.io/github/license/PattyCoding123/personal-portfolio.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/PattyCoding123/personal-portfolio?color=%23808080&style=for-the-badge
 [license-url]: https://github.com/PattyCoding123/personal-portfolio/blob/master/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/patrick-ducusin-879b25208/
