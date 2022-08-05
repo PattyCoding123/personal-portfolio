@@ -125,7 +125,7 @@ Project Link: [https://github.com/PattyCoding123/personal-portfolio](https://git
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 * [Sanity.io for the amazing compatibility with React!](https://www.sanity.io/)
-* [JavaScript Mastery for their project-based coaching!](https://youtube.com/c/JavaScriptMastery)
+* [JavaScript Mastery for their coaching!](https://youtube.com/c/JavaScriptMastery)
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
