@@ -124,7 +124,7 @@ Project Link: [https://github.com/PattyCoding123/personal-portfolio](https://git
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-* [Sanity.io for the amazing content management system!](https://www.sanity.io/)
+* [Sanity.io for the amazing content management compatibility with React!](https://www.sanity.io/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
