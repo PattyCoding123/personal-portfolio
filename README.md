@@ -19,7 +19,7 @@
 <h1 align="center">My Personal Portfolio</h1>
 
   <p align="center">
-    My Personal Porfolio is my own personal portfolio project that I programmed using React.js for the front-end and Sanity.io for the back-end content management. I initialized the project using the npx create-react-app command and proceded to make the necessary components to bring the website to life. I used SASS for the styling of all the DOM elements, and I connected a Sanity.io client to the components in order to avoid hardcoding my data into the front-end.
+    My Personal Porfolio is my own personal portfolio project that I programmed using React.js for the front-end and Sanity.io for the back-end content management.
     <br />
     <a href="https://github.com/PattyCoding123/personal-portfolio"><strong>Check out the docs »</strong></a>
     <br />
@@ -59,7 +59,7 @@
 
 [![Look at the live demo!][product-screenshot]](https://patrickducusinportfolio.com)
 
-As mentioned earlier, the project was my attempt at a fully responsive personal porfolio website that I could use to display my skills and experiences. The entire front-end code was handled using React.js, and I configured Sanity in JavaScript to assist with the back-end data management. Now, I can add more skills, job experiences, and descriptions without needing to code them again in the front-end. Additionally, with the styling, the website is fully functional on many mobile devices.
+As mentioned earlier, the project was my attempt at a fully responsive personal porfolio website that I could use to display my skills and experiences. The entire front-end code was handled using React.js, and I configured Sanity in JavaScript to assist with the back-end data management. I initialized the project using the npx create-react-app command and proceded to make the necessary components to bring the website to life. I used SASS for the styling of all the DOM elements, and I connected a Sanity.io client to the components in order to avoid hardcoding my data into the front-end. Now, I can add more skills, job experiences, and descriptions without needing to code them again in the front-end. Additionally, with the styling, the website is fully functional on many mobile devices. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
