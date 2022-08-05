@@ -13,15 +13,13 @@
 <br />
 <div align="center">
   <a href="https://github.com/PattyCoding123/personal-portfolio">
-    <img src="assets/icon/icon.png" alt="Logo" width="80" height="80">
+    <img src="src/assets/about04.png" alt="Logo" width="80" height="80">
   </a>
   
-<h1 align="center">My Notes Project</h1>
+<h1 align="center">My Personal Portfolio</h1>
 
   <p align="center">
-    My Notes Project is my introductory project to the Flutter framework. It includes a finished note-taking app that utilizes Flutter for the business/presentation
-    logic, and it also uses Firebase for backend authentication and data storage with Cloud Storage. The app allows users to sign-up for an account which they must
-    verify with their email address, and once they reach the main page of the app, they can create, read, update, delete, and even share notes.
+    My Personal Porfolio is my own personal portfolio project that I programmed using React.js for the frontend and Sanity.io for the backend content management. I initialized the project using the npx create-react-app command and proceded to make the necessary components to bring the website to life. I used SASS for the styling of all the DOM elements, and I connected a Sanity.io client to the components in order to avoid hardcoding my data into the frontend.
     <br />
     <a href="https://github.com/PattyCoding123/personal-portfolio"><strong>Check out the docs »</strong></a>
     <br />
@@ -66,7 +64,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-As mentioned earlier, the project was my first hands-on experience using the Flutter framework as well as working with any sort of backend software in general. I utilized a full Flutter course by Vandad Nahavandipoor to help guide me throughout the entire course of the project (https://youtu.be/VPvVD8t02U8). Many different packages from pub.dev helped in the developement of this project. 
+[![Look at the live demo!][product-screenshot]](https://patrickducusinportfolio.com)
+
+As mentioned earlier, the project was my attempt at a fully responsive personal porfolio website that I could use to display my skills and experiences. The entire frontend code was handled using React.js, and I configured Sanity in JavaScript to assist with the backend data management. Now, I can add more skills, job experiences, and descriptions without needing to code them again in the frontend.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -104,6 +104,7 @@ Once you have a compatible IDE installed, you can move to the prerequisites sect
 - [x] Animations for different sections
 - [x] Working links to websites for social media and projects
 - [x] Animations for different sections
+- [x] Backend content management 
 - [x] Contact form
 
 
@@ -162,6 +163,6 @@ Project Link: [https://github.com/PattyCoding123/personal-portfolio](https://git
 [license-url]: https://github.com/PattyCoding123/personal-portfolio/blob/master/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/patrick-ducusin-879b25208/
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: src/assets/demo.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
