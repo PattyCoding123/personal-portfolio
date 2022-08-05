@@ -24,7 +24,7 @@
     <a href="https://github.com/PattyCoding123/personal-portfolio"><strong>Check out the docs »</strong></a>
     <br />
     <br />
-    <a href="https://patrickducusinportfolio.com">View Demo</a>
+    <a href="https://patrickducusinportfolio.com">View Website</a>
     ·
     <a href="https://github.com/PattyCoding123/personal-portfolio/issues">Report Bug</a>
     ·
