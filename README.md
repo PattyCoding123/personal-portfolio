@@ -13,7 +13,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/PattyCoding123/personal-portfolio">
-    <img src="assets/icon/icon.png" alt="Logo" width="80" height="80">
+    <img src="src/assets/about04.png" alt="Logo" width="80" height="80">
   </a>
   
 <h1 align="center">My Personal Portfolio</h1>
@@ -163,6 +163,6 @@ Project Link: [https://github.com/PattyCoding123/personal-portfolio](https://git
 [license-url]: https://github.com/PattyCoding123/personal-portfolio/blob/master/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/patrick-ducusin-879b25208/
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: src/assets/demo.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
