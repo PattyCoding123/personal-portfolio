@@ -24,7 +24,7 @@
     <a href="https://github.com/PattyCoding123/personal-portfolio"><strong>Check out the docs »</strong></a>
     <br />
     <br />
-    <a href="https://patrickducusinportfolio.com">View Website</a>
+    <a href="https://patrickducusinportfolio.dev">View Website</a>
     ·
     <a href="https://github.com/PattyCoding123/personal-portfolio/issues">Report Bug</a>
     ·
@@ -57,7 +57,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Look at the live demo!][product-screenshot]](https://patrickducusinportfolio.com)
+[![Look at the live demo!][product-screenshot]](https://patrickducusinportfolio.dev)
 
 As mentioned earlier, the project is a fully responsive personal porfolio website that I could use to display my skills and experiences. The entire front-end code was done using React.js, and I configured Sanity in JavaScript to assist with the back-end data management. I initialized the project using the npx create-react-app command, and I connected a Sanity client to the components in order to avoid hardcoding my data into the front-end. Now, I can add more skills, job experiences, and descriptions without needing to code them all in the front-end. Additionally, with the styling, the website is fully functional on many mobile devices. 
 
