@@ -48,7 +48,6 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -68,6 +67,7 @@ As mentioned earlier, the project was my attempt at a fully responsive personal 
 ### Built With
 
 * [![React][React.js]][React-url]
+* [Sanity.io](https://www.sanity.io/)
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -120,13 +120,6 @@ Project Link: [https://github.com/PattyCoding123/personal-portfolio](https://git
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-* [Sanity.io for the amazing compatibility with React!](https://www.sanity.io/)
-* [JavaScript Mastery for their coaching!](https://youtube.com/c/JavaScriptMastery)
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
