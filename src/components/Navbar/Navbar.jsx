@@ -23,11 +23,8 @@ const [toggle, setToggle] = useState(false);
           anchor tags that will appear in the nav. When the
           user clicks on the link, it will move them to that
           section of the webpage.
-
-          Currently, since we have no testimonials as of yet,
-          we will exclude them from the navbar for now.
         */}
-        {['home', 'about', 'projects', 'skills', 'contact'].map((item) => (
+        {['home', 'about', 'projects', 'skills', 'testimonials', 'contact'].map((item) => (
         <li className="app__flex p-text" key={`link-${item}`}>
           <div /> {/* This div is used to create a circle over the links when
           hovering over them */}
@@ -60,7 +57,7 @@ const [toggle, setToggle] = useState(false);
               {/*
                 Don't include testimonials yet as we have no testimonials.
               */}
-              {['home', 'about', 'projects', 'skills', 'contact'].map((item) => (
+              {['home', 'about', 'projects', 'skills', 'testimonials', 'contact'].map((item) => (
                 <li key={item}>
                   {/* 
                     The anchor's onClick property will close it
