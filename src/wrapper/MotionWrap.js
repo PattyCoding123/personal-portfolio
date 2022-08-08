@@ -9,7 +9,8 @@ import { motion } from 'framer-motion';
     The classNames parameter is meant to style this main motion.div
     element since the containers have been coded with fragments
     as the parent element. The SCSS selectors of app__componentName
-    will now target this motion.div from the other SCSS files
+    will now target this motion.div from the other SCSS files from the 
+    container folders.
 */  
 
 const MotionWrap = (Component, classNames) => function HOC() {
