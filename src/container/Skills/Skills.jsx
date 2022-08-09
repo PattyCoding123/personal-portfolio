@@ -1,10 +1,10 @@
-import { React, useState, useEffect, Fragment } from 'react';
-import { motion } from 'framer-motion';
-import ReactToolTip from 'react-tooltip';
+import { React, useState, useEffect, Fragment } from 'react'
+import { motion } from 'framer-motion'
+import ReactToolTip from 'react-tooltip'
 
-import { AppWrap, MotionWrap } from '../../wrapper';
-import { urlFor, client } from '../../client';
-import './Skills.scss';
+import { AppWrap, MotionWrap } from '../../wrapper'
+import { urlFor, client } from '../../client'
+import './Skills.scss'
 
 const Skills = () => {
   /*
@@ -18,8 +18,8 @@ const Skills = () => {
 
     Each year will have an array of job-related experiences.
   */
-  const [skills, setSkills] = useState([]);
-  const [experiences, setExperiences] = useState([]);
+  const [skills, setSkills] = useState([])
+  const [experiences, setExperiences] = useState([])
 
   /*  
     The following useEffect will pull data from the Skills schema and
@@ -29,12 +29,12 @@ const Skills = () => {
     array in the dependencies array.
   */
     useEffect(() => {
-      const skillsQuery = '*[_type == "skills"]';
-      const experiencesQuery = '*[_type == "experiences"]';
+      const skillsQuery = '*[_type == "skills"]'
+      const experiencesQuery = '*[_type == "experiences"]'
   
       async function getSkillsAndExp() {
-        const skillsData = await client.fetch(skillsQuery);
-        const expData = await client.fetch(experiencesQuery);
+        const skillsData = await client.fetch(skillsQuery)
+        const expData = await client.fetch(experiencesQuery)
 
         /*
           Since the array returned by Sanity does not sort each
@@ -43,14 +43,14 @@ const Skills = () => {
           and make sure to compare the years. 1 means object b
           takes precendent over object a when sorting.
         */
-        expData.sort((a, b) => (a.year < b.year ? 1 : -1));
+        expData.sort((a, b) => (a.year < b.year ? 1 : -1))
 
-        setSkills(skillsData); // Set skills state to what we fetched from Sanity.
-        setExperiences(expData); // Set experiences state to the sorted expData array. 
+        setSkills(skillsData) // Set skills state to what we fetched from Sanity.
+        setExperiences(expData) // Set experiences state to the sorted expData array. 
       }
-      getSkillsAndExp();
+      getSkillsAndExp()
       
-    }, []);
+    }, [])
 
   return (
     <>
@@ -165,4 +165,4 @@ const Skills = () => {
 export default AppWrap(
   MotionWrap(Skills, 'app__skills'), 
   'skills',
-  'app__whitebg');
+  'app__whitebg')

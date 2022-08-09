@@ -1,9 +1,9 @@
-import { React, useState, useEffect } from 'react';
-import { BsLinkedin } from 'react-icons/bs';
+import { React, useState, useEffect } from 'react'
+import { BsLinkedin } from 'react-icons/bs'
 
-import { images } from '../../constants';
-import { AppWrap, MotionWrap } from '../../wrapper';
-import { client } from '../../client';
+import { images } from '../../constants'
+import { AppWrap, MotionWrap } from '../../wrapper'
+import { client } from '../../client'
 import './Footer.scss';
 
 const Footer = () => {
@@ -25,21 +25,22 @@ const Footer = () => {
       email: '',
       message: '',
     }
-  );
-  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  )
 
-  const { name, email, message } = formData;
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+
+  const { name, email, message } = formData
 
   // Event handler for the forms whenever a user changes input
   // for the forms.
   const handleChange = (event) => {
-    const { name, value } = event.target;
+    const { name, value } = event.target
 
     setFormData(prevFormData => ({
       ...prevFormData,
       [name]: value
-    }));
+    }))
   }
 
   /*
@@ -50,7 +51,7 @@ const Footer = () => {
     and email and full name of the person.
   */
   const handleSubmit = () => {
-    setIsLoading(true);
+    setIsLoading(true)
 
     const contact = {
       _type: 'contact',
@@ -61,8 +62,8 @@ const Footer = () => {
 
     client.create(contact)
       .then(() => {
-        setIsLoading(false);
-        setIsFormSubmitted(true);
+        setIsLoading(false)
+        setIsFormSubmitted(true)
       })
   }
 

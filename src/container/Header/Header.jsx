@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react'
+import { motion } from 'framer-motion'
 
-import { images } from '../../constants';
-import { AppWrap } from '../../wrapper';
-import './Header.scss';
+import { images } from '../../constants'
+import { AppWrap } from '../../wrapper'
+import './Header.scss'
 
 const scaleVariants = {
   // Make the tech image circles appear larger and more visible
@@ -114,4 +114,4 @@ const Header = () => {
 }
 
 // Wrap Header component with HOC and pass an id name of 'home'
-export default AppWrap(Header, 'home');
+export default AppWrap(Header, 'home')

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { NavigationDots, SocialMedia } from '../components';
+import { NavigationDots, SocialMedia } from '../components'
 
 /*
   Higher-order component that will wrap a component with a 

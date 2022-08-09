@@ -1,6 +1,6 @@
 import React from 'react'
-import { BsGithub } from 'react-icons/bs';
-import { FaLinkedin } from 'react-icons/fa';
+import { BsGithub } from 'react-icons/bs'
+import { FaLinkedin } from 'react-icons/fa'
 
 const SocialMedia = () => {
   return (

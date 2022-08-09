@@ -1,39 +1,39 @@
-import { React, useState, useEffect }from 'react';
-import { motion } from 'framer-motion';
+import { React, useState, useEffect }from 'react'
+import { motion } from 'framer-motion'
 
-import { urlFor, client } from '../../client';
-import { AppWrap, MotionWrap } from '../../wrapper';
+import { urlFor, client } from '../../client'
+import { AppWrap, MotionWrap } from '../../wrapper'
 import './About.scss';
 
 const About = () => {
 
   // Create state regarding the abouts objects from sanity.
   // The initial state will be an empty array.
-  const [abouts, setAbouts] = useState([]);
+  const [abouts, setAbouts] = useState([])
 
   // Since we are fetching the abouts objects from Sanity
   // we need to use the useEffect hook.
   useEffect(() => {
-    const query = '*[_type == "abouts"]';
+    const query = '*[_type == "abouts"]'
 
     // Declare an asynchronous function since we
     // are using the fetch method.
     async function getAbouts() {
-      const data = await client.fetch(query);
+      const data = await client.fetch(query)
 
       /*
         Right now, I want to sort my Abouts data
         alphabetically. To do so, I will call the sort array
         to sort each About by their title.
       */
-      data.sort((a,b) => (a.title > b.title ? 1 : -1));
+      data.sort((a,b) => (a.title > b.title ? 1 : -1))
 
-      setAbouts(data);
+      setAbouts(data)
     }
 
-    getAbouts();
+    getAbouts()
 
-  }, []);
+  }, [])
 
   return (
     <>
@@ -69,4 +69,4 @@ const About = () => {
 export default AppWrap(
   MotionWrap(About, 'app__about'),
   'about',
-  'app__whitebg');
+  'app__whitebg')

@@ -1,10 +1,10 @@
-import { React , useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { AiFillEye, AiFillGithub } from 'react-icons/ai';
+import { React , useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import { AiFillEye, AiFillGithub } from 'react-icons/ai'
 
-import { AppWrap, MotionWrap } from '../../wrapper';
-import { urlFor, client } from '../../client';
-import './Projects.scss';
+import { AppWrap, MotionWrap } from '../../wrapper'
+import { urlFor, client } from '../../client'
+import './Projects.scss'
 
 const Projects = () => {
   /*
@@ -21,10 +21,10 @@ const Projects = () => {
     The fourth state is filterProject which will handle what Project
     will be rendered to the main page.
   */
-  const [activeFilter, setActiveFilter] = useState('All');
-  const [animateCard, setAnimateCard] = useState({y: 0, opacity: 1});
-  const [projects, setProjects] = useState([]);
-  const [filterProject, setFilterProject] = useState([]);
+  const [activeFilter, setActiveFilter] = useState('All')
+  const [animateCard, setAnimateCard] = useState({y: 0, opacity: 1})
+  const [projects, setProjects] = useState([])
+  const [filterProject, setFilterProject] = useState([])
 
   /*  
     The following useEffect will pull data from the Project's schema
@@ -34,14 +34,14 @@ const Projects = () => {
     array.
   */
   useEffect(() => {
-    const query = '*[_type == "projects"]';
+    const query = '*[_type == "projects"]'
 
     async function getProjects() {
-      const data = await client.fetch(query);
-      setProjects(data); // Set Projects state to whatever we fetched from Sanity.
-      setFilterProject(data); //
+      const data = await client.fetch(query)
+      setProjects(data) // Set Projects state to whatever we fetched from Sanity.
+      setFilterProject(data) //
     }
-    getProjects();
+    getProjects()
     
   }, [])
   
@@ -73,9 +73,9 @@ const Projects = () => {
           filter in its tag array.
         */
 
-        setFilterProject(projects.filter((project) => project.tags.includes(tag)));
+        setFilterProject(projects.filter((project) => project.tags.includes(tag)))
       }
-    }, 500);
+    }, 500)
   }
 
   return (
@@ -215,4 +215,4 @@ const Projects = () => {
 export default AppWrap(
   MotionWrap(Projects, 'app__projects'),
   'projects',
-  'app__primarybg');
+  'app__primarybg')
