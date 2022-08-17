@@ -28,29 +28,29 @@ const Skills = () => {
     Since we only want the useEffect to run once, we will use an empty
     array in the dependencies array.
   */
-    useEffect(() => {
-      const skillsQuery = '*[_type == "skills"]'
-      const experiencesQuery = '*[_type == "experiences"]'
-  
-      async function getSkillsAndExp() {
-        const skillsData = await client.fetch(skillsQuery)
-        const expData = await client.fetch(experiencesQuery)
+  useEffect(() => {
+    const skillsQuery = '*[_type == "skills"]'
+    const experiencesQuery = '*[_type == "experiences"]'
 
-        /*
-          Since the array returned by Sanity does not sort each
-          experience by year (it sorts by date created), we need 
-          to call the sort method on the experiences data and
-          and make sure to compare the years. 1 means object b
-          takes precendent over object a when sorting.
-        */
-        expData.sort((a, b) => (a.year < b.year ? 1 : -1))
+    async function getSkillsAndExp() {
+      const skillsData = await client.fetch(skillsQuery)
+      const expData = await client.fetch(experiencesQuery)
 
-        setSkills(skillsData) // Set skills state to what we fetched from Sanity.
-        setExperiences(expData) // Set experiences state to the sorted expData array. 
-      }
-      getSkillsAndExp()
-      
-    }, [])
+      /*
+        Since the array returned by Sanity does not sort each
+        experience by year (it sorts by date created), we need 
+        to call the sort method on the experiences data and
+        and make sure to compare the years. 1 means object b
+        takes precendent over object a when sorting.
+      */
+      expData.sort((a, b) => (a.year < b.year ? 1 : -1))
+
+      setSkills(skillsData) // Set skills state to what we fetched from Sanity.
+      setExperiences(expData) // Set experiences state to the sorted expData array. 
+    }
+    getSkillsAndExp()
+    
+  }, [])
 
   return (
     <>
