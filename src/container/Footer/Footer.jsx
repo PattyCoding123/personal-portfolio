@@ -165,8 +165,12 @@ const Footer = () => {
   )
 }
 
-// Wrap Footer component with MotionWrap HOC 
-// and pass an id parameter of 'contact' into AppWrap
+/* 
+  Wrap Footer component with MotionWrap HOC 
+  and pass an id parameter of 'contact' into AppWrap.
+  The app__primarybg parameter means the AppWrap container div
+  will use the primary background color for this section.
+*/
 export default AppWrap(
   MotionWrap(Footer, 'app__footer'),
   'contact',

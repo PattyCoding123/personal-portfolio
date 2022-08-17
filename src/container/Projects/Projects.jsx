@@ -210,8 +210,12 @@ const Projects = () => {
 
 }
 
-// Wrap Projects component with MotionWrap HOC 
-// and pass an id parameter of 'projects' into AppWrap
+/*
+  Wrap Projects component with MotionWrap HOC 
+  and pass an id parameter of 'projects' into AppWrap.
+  The app__primarybg means the AppWrap container div for the
+  Projects section will have the primary background color.
+*/
 export default AppWrap(
   MotionWrap(Projects, 'app__projects'),
   'projects',

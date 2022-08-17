@@ -64,8 +64,12 @@ const About = () => {
   )
 }
 
-// Wrap About component with MotionWrap HOC 
-// and pass an id parameter of 'about' into AppWrap
+/* 
+  Wrap About component with MotionWrap HOC 
+  and pass an id parameter of 'about' into AppWrap.
+  app__whitebg means the About section for the AppWrap
+  container div will have the white background color styling.
+*/
 export default AppWrap(
   MotionWrap(About, 'app__about'),
   'about',

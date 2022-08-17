@@ -160,8 +160,12 @@ const Skills = () => {
   )
 }
 
-// Wrap Skills component with MotionWrap HOC 
-// and pass an id parameter of 'skills' into AppWrap
+/* 
+  Wrap Skills component with MotionWrap HOC 
+  and pass an id parameter of 'skills' into AppWrap.
+  The app__whitebg means that the AppWrap container
+  div will have the white background color.
+*/
 export default AppWrap(
   MotionWrap(Skills, 'app__skills'), 
   'skills',
