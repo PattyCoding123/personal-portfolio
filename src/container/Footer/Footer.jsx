@@ -91,7 +91,7 @@ const Footer = () => {
         <a 
           href="https://www.linkedin.com/in/patrick-ducusin-879b25208/" 
           target="_blank" 
-          rel="noreferrer" 
+          rel="noreferrer noopener" 
         >
           <div className="app__footer-card">
             <BsLinkedin />

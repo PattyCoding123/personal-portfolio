@@ -152,7 +152,7 @@ const Projects = () => {
                   While hovered, the icon will become smaller. While in view,
                     hey will increase in size.
                 */}
-                {project.projectLink && <a href={project.projectLink} target="_blank" rel="noreferrer">
+                {project.projectLink && <a href={project.projectLink} target="_blank" rel="noreferrer noopener">
                   <motion.div
                     whileInView={{scale: [0, 1]}}
                     whileHover={{ scale: [1, 0.9] }}
@@ -169,7 +169,7 @@ const Projects = () => {
                   While hovered, the icon will become smaller. While in view,
                     hey will increase in size.
                 */}
-                {project.codeLink && <a href={project.codeLink} target="_blank" rel="noreferrer">
+                {project.codeLink && <a href={project.codeLink} target="_blank" rel="noreferrer noopener">
                   {/* 
                     The following motion.div will animate the anchor tag icon.
                     While hovered, the icon will become smaller. While in view,
