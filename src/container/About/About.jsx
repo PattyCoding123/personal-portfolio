@@ -67,10 +67,10 @@ const About = () => {
 /* 
   Wrap About component with MotionWrap HOC 
   and pass an id parameter of 'about' into AppWrap.
-  app__whitebg means the About section for the AppWrap
-  container div will have the white background color styling.
+  app__tokyolightbg means the About section for the AppWrap
+  container div will have the tokyolight styling.
 */
 export default AppWrap(
   MotionWrap(About, 'app__about'),
   'about',
-  'app__whitebg')
+  'app__tokyolightbg')

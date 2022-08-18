@@ -8,9 +8,12 @@
 :root {
   --font-base: "DM Sans", sans-serif;
 
-  --primary-color: #edf2f8;
+  --primary-color: #1a1b27;
   --secondary-color: #313bac;
   --black-color: #030303;
+  --tokyo-night-title-color: #70a5fd;
+  --tokyo-night-text-color: #38bdae;
+  --tokyo-night-light: #2b2e44;
   --lightGray-color: #e4e4e4;
   --gray-color: #6b7688;
   --brown-color: #46364a;

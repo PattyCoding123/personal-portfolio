@@ -9,8 +9,8 @@
     font-family: var(--font-base);
   }
   
-  .app__whitebg {
-    background-color: var(--white-color);
+  .app__tokyolightbg {
+    background-color: var(--tokyo-night-light);
   }
   
   .app__primarybg {
@@ -54,11 +54,11 @@
     font-size: 2.75rem;
     font-weight: 800;
     text-align: center;
-    color: var(--black-color);
+    color: var(--tokyo-night-title-color);
     text-transform: capitalize;
   
     span {
-      color: var(--secondary-color);
+      color: var(--tokyo-night-text-color);
     }
   
     @media screen and (min-width: 2000px) {
@@ -84,7 +84,7 @@
   .bold-text {
     font-size: 1rem;
     font-weight: 800;
-    color: var(--black-color);
+    color: var(--tokyo-night-title-color);
     text-align: left;
   
     @media screen and (min-width: 2000px) {
@@ -165,7 +165,7 @@
       transition: background-color 0.2s ease-in-out;
   
       &:hover {
-        background-color: var(--secondary-color);
+        background-color: var(--tokyo-night-text-color);
       }
   
       @media screen and (min-width: 2000px) {

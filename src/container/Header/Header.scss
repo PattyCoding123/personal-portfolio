@@ -6,13 +6,13 @@
 
 #home {
     position: relative;
-    background: url('../../assets/bgIMG.png');
+    // background: url('../../assets/bgIMG.png');
 
     // Always do this whenever you use an image as a background.
-    background-size: cover; 
+    // background-size: cover; 
 
-    background-repeat: repeat;
-    background-position: center;
+    // background-repeat: repeat;
+    // background-position: center;
 
     .app__wrapper {
         padding: 0;
@@ -92,6 +92,7 @@
     .badge-cmp, .tag-cmp {
         padding: 1rem 2rem;
         border: var(--white-color);
+        background-color: var(--tokyo-night-light);
         border-radius: 15px;
         flex-direction: row;
         width: auto;

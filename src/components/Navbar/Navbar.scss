@@ -95,18 +95,18 @@
 
             
             // When hovering over the link, the transition will
-            // cause the link to go blue in 0.3 seconds
+            // cause the link to go light green in 0.3 seconds
             
             transition: all 0.3s ease-in-out;
 
             &:hover {
-                color: var(--secondary-color);
+                color: var(--tokyo-night-text-color);
             }
         }
 
         &:hover {
             div {
-                background: var(--secondary-color);
+                background: var(--tokyo-night-text-color);
             }
         }
     }

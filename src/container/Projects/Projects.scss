@@ -32,7 +32,7 @@
         margin: 0.5rem;
 
         &:hover {
-            background-color: var(--secondary-color);
+            background-color: var(--tokyo-night-text-color);
             color: #fff
         }
 
@@ -47,7 +47,7 @@
     // If a filter tag is current selected as the active filter,
     // give a background color of secondary color and a white text.
     .item-active {
-        background-color: var(--secondary-color);
+        background-color: var(--tokyo-night-text-color);
         color: #fff;
     }
 }
