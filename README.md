@@ -126,6 +126,8 @@ Project Link: [https://github.com/PattyCoding123/personal-portfolio](https://git
  ## Acknowledgments
  * [JavaScript Mastery for their coaching!](https://youtube.com/c/JavaScriptMastery)
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [license-shield]: https://img.shields.io/github/license/PattyCoding123/personal-portfolio?color=%23808080&style=for-the-badge
