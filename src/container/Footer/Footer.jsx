@@ -1,9 +1,11 @@
 import { React, useState } from 'react'
 import { BsLinkedin } from 'react-icons/bs'
+import { GrDocumentPdf } from 'react-icons/gr'
 
 import { images } from '../../constants'
 import { AppWrap, MotionWrap } from '../../wrapper'
 import { client } from '../../client'
+import pdf from '../../documents/Resume_Software.pdf'
 import './Footer.scss';
 
 const Footer = () => {
@@ -73,7 +75,7 @@ const Footer = () => {
 
       {/*
         The following div contains the contact cards for the contact footer.
-        The div will contain two 'card' anchor tags that each contain a div.
+        The div will contain 'card' anchor tags that each contain a div.
         Each div will contain an image some form of text.
 
         I prefer this method over containing the anchors in a div
@@ -81,6 +83,13 @@ const Footer = () => {
       */}
       <div className="app__footer-cards">
         
+        <a href={pdf} target="_blank" rel="noopener noreferrer">
+          <div className="app__footer-card">
+            <GrDocumentPdf />
+            <p className="p-text">Click to view résumé</p>
+          </div>
+        </a>
+
         <a href="mailto:patrickducusin2@gmail.com">
           <div className="app__footer-card">
             <img src={images.email} alt="email" />
