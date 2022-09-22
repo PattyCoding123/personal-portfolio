@@ -5,7 +5,7 @@ import { GrDocumentPdf } from 'react-icons/gr'
 import { images } from '../../constants'
 import { AppWrap, MotionWrap } from '../../wrapper'
 import { client } from '../../client'
-import pdf from '../../documents/Resume_Software.pdf'
+import pdf from '../../documents/Resume.pdf'
 import './Footer.scss';
 
 const Footer = () => {
